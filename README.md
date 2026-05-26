@@ -2,7 +2,7 @@
 
 Landing page institucional para uma agência de design criativo, desenvolvida com **HTML, CSS e JavaScript puro** — sem frameworks, sem dependências externas.
 
- **[Ver site ao vivo](https://LuisGuilherme605.github.io/Forma-studio)**
+ **[Ver site ao vivo](https://luisguilherme605.github.io/Forma-studio/)**
 
 ---
 
