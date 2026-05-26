@@ -1,12 +1,12 @@
-# 🎨 Forma Studio — Landing Page
+#  Forma Studio — Landing Page
 
 Landing page institucional para uma agência de design criativo, desenvolvida com **HTML, CSS e JavaScript puro** — sem frameworks, sem dependências externas.
 
-🔗 **[Ver site ao vivo](https://LuisGuilherme605.github.io/Forma-studio)**
+ **[Ver site ao vivo](https://LuisGuilherme605.github.io/Forma-studio)**
 
 ---
 
-## 📸 Preview
+##  Preview
 
 > <img width="1249" height="588" alt="{C565815E-E96C-4180-9605-008AECA5893B}" src="https://github.com/user-attachments/assets/c296a9e1-e40b-4dee-a426-33c8466ae900" />
 
