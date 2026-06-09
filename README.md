@@ -25,6 +25,8 @@ Landing page institucional para uma agência de design criativo, desenvolvida co
 - Footer completo com links e colunas organizadas
 - Cursor customizado com animação suave
 - Layout 100% responsivo para mobile
+- Meta tags de SEO e Open Graph para compartilhamento em redes sociais
+- Atributos de acessibilidade (aria-labels, aria-hidden)
 
 ---
 
@@ -72,11 +74,12 @@ Ou use a extensão **Live Server** no VS Code para recarregamento automático.
 
 ```
 Forma-studio/
-│
-└── index.html    # Todo o HTML, CSS e JS em um único arquivo
+├── index.html    # Estrutura HTML com meta tags de SEO e acessibilidade
+├── style.css     # Estilos CSS (layout, animações, responsivo)
+├── script.js     # JavaScript (scroll, reveal, cursor customizado)
+├── .gitignore    # Arquivos ignorados pelo Git
+└── README.md     # Documentação do projeto
 ```
-
-> Projeto construído em arquivo único (single-file) para facilitar o deploy e demonstrar domínio de CSS e JS nativos.
 
 ---
 
@@ -89,6 +92,8 @@ Forma-studio/
 - Marquee infinita com CSS animation
 - Design responsivo com media queries
 - Variáveis CSS (`custom properties`) para consistência visual
+- Boas práticas de SEO com meta tags Open Graph e Twitter Card
+- Acessibilidade web com atributos ARIA
 
 ---
 
