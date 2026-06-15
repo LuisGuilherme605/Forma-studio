@@ -266,9 +266,11 @@ h1 em {
   position: relative;
   overflow: hidden;
 }
-.img-cell-1 { grid-column: 1 / 3; background: #2A2520; }
-.img-cell-2 { background: #322D27; }
-.img-cell-3 { background: #1E1B17; }
+.img-cell-1 { grid-column: 1 / 3; background: #2A2520 url('assets/hero-1.svg') center/cover no-repeat; }
+.img-cell-2 { background: #322D27 url('assets/hero-2.svg') center/cover no-repeat; }
+.img-cell-3 { background: #1E1B17 url('assets/hero-3.svg') center/cover no-repeat; }
+/* As artes do hero já trazem suas formas; ocultamos os decoradores antigos */
+.hero-image-grid .img-decor { display: none; }
 .img-decor {
   position: absolute;
   inset: 0;
@@ -454,11 +456,13 @@ h2 em { font-style: italic; color: var(--accent); }
   transition: transform 0.6s ease;
 }
 .project-card:hover .project-bg { transform: scale(1.04); }
-.bg-1 { background: linear-gradient(135deg, #2A1F2D, #3D2B42); }
-.bg-2 { background: linear-gradient(135deg, #1A2A35, #243D4A); }
-.bg-3 { background: linear-gradient(135deg, #2D2418, #433520); }
-.bg-4 { background: linear-gradient(135deg, #1F2A1F, #2E3D2E); }
+.bg-1 { background: #1C1813 url('assets/project-aureo.svg') center/cover no-repeat; }
+.bg-2 { background: #0E1A22 url('assets/project-finapp.svg') center/cover no-repeat; }
+.bg-3 { background: #23180D url('assets/project-raizes.svg') center/cover no-repeat; }
+.bg-4 { background: #121C12 url('assets/project-serraverde.svg') center/cover no-repeat; }
 
+/* As artes do portfólio já são completas; ocultamos as formas decorativas antigas */
+.project-bg .bg-shape { display: none; }
 .bg-shape {
   position: absolute;
   border-radius: 50%;
@@ -828,6 +832,11 @@ footer {
   z-index: 9998;
   transition: transform 0.15s, width 0.3s, height 0.3s, opacity 0.3s;
   opacity: 0.5;
+}
+
+/* Esconde o cursor customizado em dispositivos de toque (mobile/tablet) */
+@media (hover: none), (pointer: coarse) {
+  .cursor, .cursor-ring { display: none !important; }
 }
 
 /* HORIZONTAL MARQUEE */
