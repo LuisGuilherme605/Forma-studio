@@ -15,18 +15,24 @@ Landing page institucional para uma agência de design criativo, desenvolvida co
 ##  Funcionalidades
 
 - Hero com layout dividido em duas colunas e animações de entrada
-- Marquee (faixa animada) com os serviços da agência
-- Seção de estatísticas com reveal ao rolar a página
-- Grid de serviços com hover interativo
-- Portfólio com cards e efeito hover de sobreposição
+- Marquee (faixa animada) com os serviços da agência — pausa ao passar o mouse
+- Seção de estatísticas com **contadores animados** (count-up) ao rolar a página
+- Grid de serviços com hover interativo e indicador animado
+- Portfólio com cards, títulos sempre visíveis e elevação suave no hover
 - Processo em 4 etapas com ícones SVG
 - Seção de depoimentos de clientes
-- CTA com formulário de contato
-- Footer completo com links e colunas organizadas
-- Cursor customizado com animação suave
+- **Seção FAQ** com acordeão acessível
+- **Formulário de contato** com validação no cliente (e fallback por e-mail)
+- **Menu mobile** (hambúrguer) com transição suave
+- **Barra de progresso de leitura** no topo
+- **Botão "voltar ao topo"**
+- **Scrollspy** — destaca o link da seção visível na navegação
+- Footer completo com links funcionais (âncoras, mailto, tel)
+- Cursor customizado (apenas desktop, desativado em touch)
+- Ano de copyright dinâmico
 - Layout 100% responsivo para mobile
-- Meta tags de SEO e Open Graph para compartilhamento em redes sociais
-- Atributos de acessibilidade (aria-labels, aria-hidden)
+- Meta tags de SEO e Open Graph + favicon SVG inline
+- Acessibilidade: skip link, foco visível, ARIA e suporte a `prefers-reduced-motion`
 
 ---
 
@@ -76,7 +82,7 @@ Ou use a extensão **Live Server** no VS Code para recarregamento automático.
 Forma-studio/
 ├── index.html    # Estrutura HTML com meta tags de SEO e acessibilidade
 ├── style.css     # Estilos CSS (layout, animações, responsivo)
-├── script.js     # JavaScript (scroll, reveal, cursor customizado)
+├── script.js     # JavaScript (menu, scrollspy, contadores, FAQ, formulário, cursor)
 ├── .gitignore    # Arquivos ignorados pelo Git
 └── README.md     # Documentação do projeto
 ```

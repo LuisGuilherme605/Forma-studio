@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Mockup de interface do app Finapp">
+  <defs>
+    <linearGradient id="finBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16242E"/>
+      <stop offset="1" stop-color="#0E1A22"/>
+    </linearGradient>
+    <linearGradient id="finBar" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#378ADD"/>
+      <stop offset="1" stop-color="#6FB3F2"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#finBg)"/>
+  <!-- tela do app -->
+  <rect x="250" y="70" width="300" height="500" rx="34" fill="#0B1218" stroke="#378ADD" stroke-opacity="0.4" stroke-width="1.5"/>
+  <rect x="270" y="100" width="260" height="120" rx="16" fill="#378ADD" fill-opacity="0.18"/>
+  <text x="290" y="140" font-family="DM Sans, sans-serif" font-size="14" letter-spacing="2" fill="#6FB3F2">SALDO TOTAL</text>
+  <text x="290" y="185" font-family="Playfair Display, Georgia, serif" font-size="40" fill="#FDFBF7">R$ 12.480</text>
+  <!-- gráfico de barras -->
+  <g>
+    <rect x="290" y="380" width="34" height="80" rx="6" fill="url(#finBar)" fill-opacity="0.5"/>
+    <rect x="338" y="340" width="34" height="120" rx="6" fill="url(#finBar)" fill-opacity="0.7"/>
+    <rect x="386" y="300" width="34" height="160" rx="6" fill="url(#finBar)"/>
+    <rect x="434" y="360" width="34" height="100" rx="6" fill="url(#finBar)" fill-opacity="0.6"/>
+    <rect x="482" y="320" width="34" height="140" rx="6" fill="url(#finBar)" fill-opacity="0.8"/>
+  </g>
+  <!-- linha de tendência -->
+  <polyline points="290,300 340,270 390,290 440,240 490,210" fill="none" stroke="#6FB3F2" stroke-width="2.5"/>
+  <circle cx="490" cy="210" r="6" fill="#FDFBF7"/>
+  <!-- cartões flutuantes -->
+  <rect x="270" y="490" width="120" height="56" rx="12" fill="#FDFBF7" fill-opacity="0.06"/>
+  <rect x="410" y="490" width="120" height="56" rx="12" fill="#FDFBF7" fill-opacity="0.06"/>
+</svg>

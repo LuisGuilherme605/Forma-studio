@@ -24,11 +24,19 @@
 <meta name="twitter:title" content="Forma Studio — Design que transforma">
 <meta name="twitter:description" content="Agência de design criativo em São Paulo. Criamos identidades visuais e experiências digitais que conectam marcas às pessoas.">
 
+<!-- Favicon (SVG inline) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231A1814'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23C8A96E' text-anchor='middle'%3EF%3C/text%3E%3C/svg%3E">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<a href="#main" class="skip-link">Pular para o conteúdo</a>
+
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
 <div class="cursor" id="cursor" aria-hidden="true"></div>
 <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
@@ -40,10 +48,28 @@
     <li><a href="#servicos">Serviços</a></li>
     <li><a href="#portfolio">Portfólio</a></li>
     <li><a href="#processo">Processo</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#contato">Contato</a></li>
   </ul>
   <a href="#contato" class="nav-cta">Iniciar projeto</a>
+  <button id="navToggle" class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- MENU MOBILE -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#portfolio">Portfólio</a></li>
+    <li><a href="#processo">Processo</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contato">Contato</a></li>
+    <li><a href="#contato" class="mobile-cta">Iniciar projeto</a></li>
+  </ul>
+</div>
+
+<main id="main">
 
 <!-- HERO -->
 <section class="hero" aria-label="Apresentação principal">
@@ -75,7 +101,7 @@
         </div>
       </div>
     </div>
-    <span class="hero-label">© 2024 Forma Studio</span>
+    <span class="hero-label">© <span data-year>2026</span> Forma Studio</span>
   </div>
 </section>
 
@@ -100,19 +126,19 @@
 <!-- STATS -->
 <div class="stats" role="region" aria-label="Estatísticas da empresa">
   <div class="stat reveal">
-    <div class="stat-num">127+</div>
+    <div class="stat-num"><span data-count="127" data-suffix="+">127+</span></div>
     <div class="stat-label">Projetos entregues</div>
   </div>
   <div class="stat reveal">
-    <div class="stat-num">8 anos</div>
+    <div class="stat-num"><span data-count="8">8</span> anos</div>
     <div class="stat-label">De experiência</div>
   </div>
   <div class="stat reveal">
-    <div class="stat-num">94%</div>
+    <div class="stat-num"><span data-count="94" data-suffix="%">94%</span></div>
     <div class="stat-label">Clientes recorrentes</div>
   </div>
   <div class="stat reveal">
-    <div class="stat-num">14</div>
+    <div class="stat-num"><span data-count="14">14</span></div>
     <div class="stat-label">Prêmios de design</div>
   </div>
 </div>
@@ -294,17 +320,85 @@
   </div>
 </section>
 
-<!-- CTA -->
-<div class="cta-section" id="contato" role="region" aria-label="Contato">
-  <div>
+<!-- FAQ -->
+<section class="faq" id="faq" aria-label="Perguntas frequentes">
+  <div class="faq-intro">
+    <p class="section-tag reveal">Perguntas frequentes</p>
+    <h2 class="reveal">Tudo o que você precisa <em>saber.</em></h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item reveal">
+      <button class="faq-question" aria-expanded="false">
+        <span>Quanto tempo leva um projeto?</span>
+        <span class="faq-icon" aria-hidden="true"></span>
+      </button>
+      <div class="faq-answer">
+        <p>Depende do escopo. Uma identidade visual completa leva de 4 a 6 semanas; já um site institucional costuma levar de 6 a 10 semanas. Definimos o cronograma juntos logo na etapa de descoberta.</p>
+      </div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-question" aria-expanded="false">
+        <span>Como funciona o orçamento?</span>
+        <span class="faq-icon" aria-hidden="true"></span>
+      </button>
+      <div class="faq-answer">
+        <p>Cada projeto é único, então preparamos uma proposta personalizada após entender suas necessidades. Você recebe um orçamento detalhado, sem surpresas, em até 48 horas.</p>
+      </div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-question" aria-expanded="false">
+        <span>Vocês atendem clientes fora de São Paulo?</span>
+        <span class="faq-icon" aria-hidden="true"></span>
+      </button>
+      <div class="faq-answer">
+        <p>Sim! Trabalhamos de forma remota com clientes em todo o Brasil e no exterior. Todo o processo é colaborativo e acompanhado por reuniões online e entregas digitais.</p>
+      </div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-question" aria-expanded="false">
+        <span>O que recebo ao final do projeto?</span>
+        <span class="faq-icon" aria-hidden="true"></span>
+      </button>
+      <div class="faq-answer">
+        <p>Você recebe todos os arquivos editáveis e finais, um manual de uso da marca e suporte pós-entrega para garantir que tudo seja aplicado corretamente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA + FORMULÁRIO -->
+<div class="cta-section" id="contato" data-spy role="region" aria-label="Contato">
+  <div class="cta-left">
     <h2>Pronto para criar algo <em>extraordinário?</em></h2>
+    <p>Vamos conversar sobre seu projeto. Preencha o formulário e receba uma proposta personalizada dentro de 48 horas.</p>
+    <ul class="cta-contacts">
+      <li><a href="mailto:ola@formastudio.com.br">ola@formastudio.com.br</a></li>
+      <li><a href="tel:+5511999990000">+55 11 99999-0000</a></li>
+      <li>São Paulo, SP</li>
+    </ul>
   </div>
-  <div class="cta-right">
-    <p>Vamos conversar sobre seu projeto. Entre em contato e receba uma proposta personalizada dentro de 48 horas.</p>
-    <a href="mailto:ola@formastudio.com.br" class="btn-dark">Enviar mensagem</a>
-    <span style="font-size: 0.8rem; color: var(--mid);">ola@formastudio.com.br · +55 11 99999-0000</span>
-  </div>
+  <form class="contact-form" id="contactForm" novalidate>
+    <div class="form-field">
+      <label for="name">Nome</label>
+      <input type="text" id="name" name="name" autocomplete="name" placeholder="Seu nome">
+      <span class="field-error" aria-live="polite"></span>
+    </div>
+    <div class="form-field">
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" autocomplete="email" placeholder="voce@email.com">
+      <span class="field-error" aria-live="polite"></span>
+    </div>
+    <div class="form-field">
+      <label for="message">Sobre o projeto</label>
+      <textarea id="message" name="message" rows="4" placeholder="Conte um pouco sobre o que você precisa"></textarea>
+      <span class="field-error" aria-live="polite"></span>
+    </div>
+    <button type="submit" class="btn-dark">Enviar mensagem</button>
+    <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+  </form>
 </div>
+
+</main>
 
 <!-- FOOTER -->
 <footer role="contentinfo">
@@ -316,41 +410,45 @@
     <div class="footer-col">
       <h4>Serviços</h4>
       <ul>
-        <li><a href="#">Identidade Visual</a></li>
-        <li><a href="#">UI / UX Design</a></li>
-        <li><a href="#">Web Design</a></li>
-        <li><a href="#">Motion Design</a></li>
-        <li><a href="#">Editorial</a></li>
+        <li><a href="#servicos">Identidade Visual</a></li>
+        <li><a href="#servicos">UI / UX Design</a></li>
+        <li><a href="#servicos">Web Design</a></li>
+        <li><a href="#servicos">Motion Design</a></li>
+        <li><a href="#servicos">Editorial</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Empresa</h4>
       <ul>
-        <li><a href="#">Sobre nós</a></li>
-        <li><a href="#">Portfólio</a></li>
-        <li><a href="#">Processo</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Carreiras</a></li>
+        <li><a href="#servicos">Sobre nós</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#processo">Processo</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contato">Contato</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Contato</h4>
       <ul>
-        <li><a href="#">ola@formastudio.com.br</a></li>
-        <li><a href="#">+55 11 99999-0000</a></li>
-        <li><a href="#">São Paulo, SP</a></li>
+        <li><a href="mailto:ola@formastudio.com.br">ola@formastudio.com.br</a></li>
+        <li><a href="tel:+5511999990000">+55 11 99999-0000</a></li>
+        <li><a href="https://maps.google.com/?q=São Paulo, SP" target="_blank" rel="noopener noreferrer">São Paulo, SP</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2024 Forma Studio. Todos os direitos reservados.</span>
+    <span>© <span data-year>2026</span> Forma Studio. Todos os direitos reservados.</span>
     <div class="footer-socials" aria-label="Redes sociais">
-      <a href="#" rel="noopener noreferrer">Instagram</a>
-      <a href="#" rel="noopener noreferrer">Behance</a>
-      <a href="#" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://behance.net" target="_blank" rel="noopener noreferrer">Behance</a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </div>
   </div>
 </footer>
+
+<button id="toTop" class="to-top" aria-label="Voltar ao topo">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
 
 <script src="script.js"></script>
 </body>
