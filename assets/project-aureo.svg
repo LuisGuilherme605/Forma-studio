@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Composição de identidade visual da Aureo Estúdio de Arte">
+  <defs>
+    <linearGradient id="aureoBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#241B12"/>
+      <stop offset="1" stop-color="#15100A"/>
+    </linearGradient>
+    <radialGradient id="aureoGlow" cx="0.72" cy="0.4" r="0.6">
+      <stop offset="0" stop-color="#C8A96E" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#C8A96E" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="520" fill="url(#aureoBg)"/>
+  <rect width="1200" height="520" fill="url(#aureoGlow)"/>
+  <!-- grade fina -->
+  <g stroke="#C8A96E" stroke-opacity="0.08">
+    <line x1="200" y1="0" x2="200" y2="520"/>
+    <line x1="600" y1="0" x2="600" y2="520"/>
+    <line x1="1000" y1="0" x2="1000" y2="520"/>
+    <line x1="0" y1="130" x2="1200" y2="130"/>
+    <line x1="0" y1="390" x2="1200" y2="390"/>
+  </g>
+  <!-- anel dourado -->
+  <circle cx="860" cy="260" r="190" fill="none" stroke="#C8A96E" stroke-width="1.5" stroke-opacity="0.5"/>
+  <circle cx="860" cy="260" r="120" fill="#C8A96E" fill-opacity="0.12"/>
+  <circle cx="860" cy="260" r="120" fill="none" stroke="#E8D9B8" stroke-width="1" stroke-opacity="0.4"/>
+  <!-- letra A serifada -->
+  <text x="240" y="350" font-family="Playfair Display, Georgia, serif" font-style="italic" font-size="260" fill="#C8A96E">A</text>
+  <!-- detalhe geométrico -->
+  <rect x="640" y="380" width="70" height="70" fill="none" stroke="#E8D9B8" stroke-opacity="0.5" transform="rotate(15 675 415)"/>
+  <circle cx="700" cy="120" r="10" fill="#C8A96E"/>
+  <text x="240" y="430" font-family="DM Sans, sans-serif" font-size="22" letter-spacing="8" fill="#8C8578">AUREO ESTÚDIO</text>
+</svg>

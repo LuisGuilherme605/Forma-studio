@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Identidade de web design da Raízes Gastronomia Autoral">
+  <defs>
+    <linearGradient id="raizBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3A2A18"/>
+      <stop offset="1" stop-color="#23180D"/>
+    </linearGradient>
+    <radialGradient id="raizGlow" cx="0.3" cy="0.3" r="0.7">
+      <stop offset="0" stop-color="#EF9F27" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#EF9F27" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#raizBg)"/>
+  <rect width="800" height="600" fill="url(#raizGlow)"/>
+  <!-- prato -->
+  <circle cx="400" cy="300" r="200" fill="none" stroke="#EF9F27" stroke-opacity="0.5" stroke-width="1.5"/>
+  <circle cx="400" cy="300" r="150" fill="#EF9F27" fill-opacity="0.08"/>
+  <circle cx="400" cy="300" r="150" fill="none" stroke="#EF9F27" stroke-opacity="0.3"/>
+  <!-- folha / raiz estilizada -->
+  <path d="M400 300 C 360 220, 360 160, 400 110 C 440 160, 440 220, 400 300 Z" fill="#97C459" fill-opacity="0.5"/>
+  <path d="M400 300 C 400 260, 360 230, 320 230" fill="none" stroke="#97C459" stroke-opacity="0.6" stroke-width="2"/>
+  <path d="M400 300 C 400 270, 440 250, 480 255" fill="none" stroke="#97C459" stroke-opacity="0.6" stroke-width="2"/>
+  <line x1="400" y1="300" x2="400" y2="430" stroke="#97C459" stroke-opacity="0.7" stroke-width="2.5"/>
+  <!-- pontos decorativos -->
+  <circle cx="250" cy="180" r="8" fill="#EF9F27"/>
+  <circle cx="560" cy="420" r="6" fill="#97C459"/>
+  <text x="400" y="540" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-style="italic" font-size="34" fill="#F5E9D2">Raízes</text>
+</svg>
