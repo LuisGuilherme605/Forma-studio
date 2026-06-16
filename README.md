@@ -22,7 +22,10 @@ Landing page institucional para uma agência de design criativo, desenvolvida co
 - Processo em 4 etapas com ícones SVG
 - Seção de depoimentos de clientes
 - **Seção FAQ** com acordeão acessível
-- **Formulário de contato** com validação no cliente (e fallback por e-mail)
+- **Estudos de caso** — cards do portfólio abrem um modal acessível (foco preso, ESC, métricas e narrativa de cada projeto)
+- **Modo escuro/claro** com toggle, persistência em `localStorage` e respeito à preferência do sistema
+- **Formulário de contato funcional** — envio via `fetch` (compatível com Formspree), estados de envio/sucesso/erro, honeypot anti-spam e fallback por e-mail
+- **PWA** — instalável no celular, com `manifest` e service worker (cache offline)
 - **Menu mobile** (hambúrguer) com transição suave
 - **Barra de progresso de leitura** no topo
 - **Botão "voltar ao topo"**
@@ -31,8 +34,10 @@ Landing page institucional para uma agência de design criativo, desenvolvida co
 - Cursor customizado (apenas desktop, desativado em touch)
 - Ano de copyright dinâmico
 - Layout 100% responsivo para mobile
-- Meta tags de SEO e Open Graph + favicon SVG inline
+- **SEO completo** — OG image (1200×630), dados estruturados JSON-LD, `sitemap.xml`, `robots.txt`, favicons/ícones e página **404** personalizada
 - Acessibilidade: skip link, foco visível, ARIA e suporte a `prefers-reduced-motion`
+
+> ℹ️ **Ativar o envio do formulário:** crie um formulário gratuito em [formspree.io](https://formspree.io), copie o ID e substitua `SUA_FORM_ID` no atributo `data-endpoint` do `<form>` em `index.html`. Sem isso, o formulário usa automaticamente o fallback por e-mail.
 
 ---
 

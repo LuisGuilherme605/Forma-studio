@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página não encontrada — Forma Studio</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    background: #15110D;
+    color: #F5F0E8;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    overflow: hidden;
+  }
+  .wrap { position: relative; z-index: 1; max-width: 540px; }
+  .ring {
+    position: absolute;
+    width: 460px; height: 460px;
+    border: 1px solid rgba(200,169,110,0.18);
+    border-radius: 50%;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+  .code {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    font-size: clamp(5rem, 18vw, 9rem);
+    color: #C8A96E;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    margin-bottom: 1rem;
+  }
+  p { color: #8C8578; line-height: 1.7; font-weight: 300; margin-bottom: 2.5rem; }
+  a.btn {
+    display: inline-block;
+    background: #C8A96E;
+    color: #1A1814;
+    padding: 1rem 2.4rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s;
+  }
+  a.btn:hover { transform: translateY(-2px); box-shadow: 0 20px 50px rgba(0,0,0,0.4); }
+  .logo {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    letter-spacing: 0.02em;
+  }
+  .logo span { color: #C8A96E; }
+</style>
+</head>
+<body>
+  <div class="ring" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="logo"><span>F</span>orma Studio</div>
+    <div class="code">404</div>
+    <h1>Esta página saiu da prancheta.</h1>
+    <p>O endereço que você procurou não existe ou foi movido. Mas o bom design continua a um clique de distância.</p>
+    <a class="btn" href="/Forma-studio/">Voltar ao início</a>
+  </div>
+</body>
+</html>

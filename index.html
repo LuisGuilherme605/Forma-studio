@@ -3,13 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Forma Studio — Design que transforma</title>
+<title>Forma Studio — Agência de Design Criativo em São Paulo</title>
 
 <!-- SEO Meta Tags -->
 <meta name="description" content="Forma Studio — Agência de design criativo em São Paulo. Identidade visual, UI/UX, web design, motion design e consultoria criativa que transformam negócios.">
 <meta name="keywords" content="design, agência de design, identidade visual, branding, UI, UX, web design, motion design, São Paulo, design criativo">
 <meta name="author" content="Forma Studio">
-<meta name="theme-color" content="#C8A96E">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F5F0E8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15110D" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://luisguilherme605.github.io/Forma-studio/">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -18,14 +21,66 @@
 <meta property="og:url" content="https://luisguilherme605.github.io/Forma-studio/">
 <meta property="og:site_name" content="Forma Studio">
 <meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://luisguilherme605.github.io/Forma-studio/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Forma Studio — Design que transforma negócios">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Forma Studio — Design que transforma">
 <meta name="twitter:description" content="Agência de design criativo em São Paulo. Criamos identidades visuais e experiências digitais que conectam marcas às pessoas.">
+<meta name="twitter:image" content="https://luisguilherme605.github.io/Forma-studio/assets/og-image.png">
 
-<!-- Favicon (SVG inline) -->
+<!-- Favicons & PWA -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231A1814'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23C8A96E' text-anchor='middle'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+
+<!-- Aplica o tema salvo antes do paint (evita flash) -->
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+
+<!-- Dados estruturados (SEO) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Forma Studio",
+  "description": "Agência de design criativo em São Paulo. Identidade visual, UI/UX, web design, motion design e consultoria criativa.",
+  "url": "https://luisguilherme605.github.io/Forma-studio/",
+  "image": "https://luisguilherme605.github.io/Forma-studio/assets/og-image.png",
+  "email": "ola@formastudio.com.br",
+  "telephone": "+55-11-99999-0000",
+  "priceRange": "$$",
+  "areaServed": "BR",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "São Paulo",
+    "addressRegion": "SP",
+    "addressCountry": "BR"
+  },
+  "sameAs": [
+    "https://instagram.com",
+    "https://behance.net",
+    "https://linkedin.com"
+  ],
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Identidade Visual" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "UI / UX Design" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Design" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Motion Design" } }
+  ]
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,6 +106,10 @@
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#contato">Contato</a></li>
   </ul>
+  <button id="themeToggle" class="theme-toggle" type="button" aria-label="Alternar tema claro/escuro">
+    <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  </button>
   <a href="#contato" class="nav-cta">Iniciar projeto</a>
   <button id="navToggle" class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
     <span></span><span></span><span></span>
@@ -196,44 +255,39 @@
     <a href="#contato" class="btn-ghost reveal">Ver todos os projetos →</a>
   </div>
   <div class="portfolio-grid">
-    <div class="project-card reveal">
-      <div class="project-bg bg-1" aria-hidden="true">
-        <div class="bg-shape" style="width:400px;height:400px;background:#C8A96E;top:-100px;right:-100px;"></div>
-        <div class="bg-shape" style="width:200px;height:200px;background:#9B7D4A;bottom:50px;left:100px;"></div>
-      </div>
+    <button type="button" class="project-card reveal" data-project="aureo" aria-haspopup="dialog">
+      <span class="project-bg bg-1" aria-hidden="true"></span>
       <span class="project-always-visible">Destaque</span>
-      <div class="project-info">
-        <div class="project-cat">Identidade Visual</div>
-        <div class="project-title">Aureo Estúdio de Arte</div>
-      </div>
-    </div>
-    <div class="project-card reveal">
-      <div class="project-bg bg-2" aria-hidden="true">
-        <div class="bg-shape" style="width:300px;height:300px;background:#378ADD;top:-50px;left:-50px;opacity:0.12;"></div>
-      </div>
-      <div class="project-info">
-        <div class="project-cat">UI / UX Design</div>
-        <div class="project-title">Finapp — Finanças Pessoais</div>
-      </div>
-    </div>
-    <div class="project-card reveal">
-      <div class="project-bg bg-3" aria-hidden="true">
-        <div class="bg-shape" style="width:250px;height:250px;background:#EF9F27;bottom:-50px;right:-50px;opacity:0.12;"></div>
-      </div>
-      <div class="project-info">
-        <div class="project-cat">Web Design</div>
-        <div class="project-title">Raízes — Gastronomia Autoral</div>
-      </div>
-    </div>
-    <div class="project-card reveal">
-      <div class="project-bg bg-4" aria-hidden="true">
-        <div class="bg-shape" style="width:280px;height:280px;background:#97C459;top:0;right:0;opacity:0.1;border-radius: 0;"></div>
-      </div>
-      <div class="project-info">
-        <div class="project-cat">Branding + Embalagem</div>
-        <div class="project-title">Serra Verde — Cosméticos</div>
-      </div>
-    </div>
+      <span class="project-info">
+        <span class="project-cat">Identidade Visual</span>
+        <span class="project-title">Aureo Estúdio de Arte</span>
+        <span class="project-link">Ver case →</span>
+      </span>
+    </button>
+    <button type="button" class="project-card reveal" data-project="finapp" aria-haspopup="dialog">
+      <span class="project-bg bg-2" aria-hidden="true"></span>
+      <span class="project-info">
+        <span class="project-cat">UI / UX Design</span>
+        <span class="project-title">Finapp — Finanças Pessoais</span>
+        <span class="project-link">Ver case →</span>
+      </span>
+    </button>
+    <button type="button" class="project-card reveal" data-project="raizes" aria-haspopup="dialog">
+      <span class="project-bg bg-3" aria-hidden="true"></span>
+      <span class="project-info">
+        <span class="project-cat">Web Design</span>
+        <span class="project-title">Raízes — Gastronomia Autoral</span>
+        <span class="project-link">Ver case →</span>
+      </span>
+    </button>
+    <button type="button" class="project-card reveal" data-project="serraverde" aria-haspopup="dialog">
+      <span class="project-bg bg-4" aria-hidden="true"></span>
+      <span class="project-info">
+        <span class="project-cat">Branding + Embalagem</span>
+        <span class="project-title">Serra Verde — Cosméticos</span>
+        <span class="project-link">Ver case →</span>
+      </span>
+    </button>
   </div>
 </section>
 
@@ -377,7 +431,8 @@
       <li>São Paulo, SP</li>
     </ul>
   </div>
-  <form class="contact-form" id="contactForm" novalidate>
+  <form class="contact-form" id="contactForm" novalidate
+        data-endpoint="https://formspree.io/f/SUA_FORM_ID">
     <div class="form-field">
       <label for="name">Nome</label>
       <input type="text" id="name" name="name" autocomplete="name" placeholder="Seu nome">
@@ -393,7 +448,12 @@
       <textarea id="message" name="message" rows="4" placeholder="Conte um pouco sobre o que você precisa"></textarea>
       <span class="field-error" aria-live="polite"></span>
     </div>
-    <button type="submit" class="btn-dark">Enviar mensagem</button>
+    <!-- Honeypot anti-spam: invisível para humanos, preenchido por bots -->
+    <div class="hp-field" aria-hidden="true">
+      <label for="company">Empresa (não preencha)</label>
+      <input type="text" id="company" name="_gotcha" tabindex="-1" autocomplete="off">
+    </div>
+    <button type="submit" class="btn-dark" id="formSubmit">Enviar mensagem</button>
     <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
   </form>
 </div>
@@ -449,6 +509,25 @@
 <button id="toTop" class="to-top" aria-label="Voltar ao topo">
   <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
+
+<!-- MODAL DE ESTUDO DE CASO -->
+<div class="case-modal" id="caseModal" role="dialog" aria-modal="true" aria-labelledby="caseTitle" hidden>
+  <div class="case-overlay" data-close></div>
+  <div class="case-dialog" role="document">
+    <button class="case-close" data-close aria-label="Fechar">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="case-media" id="caseMedia"></div>
+    <div class="case-body">
+      <p class="case-cat" id="caseCat"></p>
+      <h3 class="case-title" id="caseTitle"></h3>
+      <p class="case-summary" id="caseSummary"></p>
+      <div class="case-metrics" id="caseMetrics"></div>
+      <div class="case-sections" id="caseSections"></div>
+      <a href="#contato" class="btn-dark case-cta" data-close>Quero um projeto assim</a>
+    </div>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
