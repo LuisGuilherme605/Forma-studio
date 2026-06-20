@@ -10,14 +10,37 @@
   const isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
 
   /* -------------------------------------------------------
+     Dispatcher único de scroll — um só listener + rAF
+     alimenta todos os efeitos (evita reflows repetidos).
+     ------------------------------------------------------- */
+  const scrollFns = [];
+  let scrollTicking = false;
+  const runScroll = () => {
+    scrollTicking = false;
+    const y = window.scrollY;
+    for (const fn of scrollFns) fn(y);
+  };
+  const onScroll = (fn) => {
+    scrollFns.push(fn);
+    fn(window.scrollY);
+  };
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (!scrollTicking) {
+        scrollTicking = true;
+        requestAnimationFrame(runScroll);
+      }
+    },
+    { passive: true }
+  );
+
+  /* -------------------------------------------------------
      Navbar — muda de estilo ao rolar
      ------------------------------------------------------- */
   const navbar = document.getElementById('navbar');
   if (navbar) {
-    const onScrollNav = () =>
-      navbar.classList.toggle('scrolled', window.scrollY > 60);
-    window.addEventListener('scroll', onScrollNav, { passive: true });
-    onScrollNav();
+    onScroll((y) => navbar.classList.toggle('scrolled', y > 60));
   }
 
   /* -------------------------------------------------------
@@ -25,16 +48,14 @@
      ------------------------------------------------------- */
   const progressBar = document.getElementById('scrollProgress');
   if (progressBar) {
-    const updateProgress = () => {
-      const scrollTop = window.scrollY;
+    const updateProgress = (y) => {
       const docHeight =
         document.documentElement.scrollHeight - window.innerHeight;
-      const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      const pct = docHeight > 0 ? (y / docHeight) * 100 : 0;
       progressBar.style.width = pct + '%';
     };
-    window.addEventListener('scroll', updateProgress, { passive: true });
-    window.addEventListener('resize', updateProgress);
-    updateProgress();
+    onScroll(updateProgress);
+    window.addEventListener('resize', () => updateProgress(window.scrollY));
   }
 
   /* -------------------------------------------------------
@@ -163,9 +184,7 @@
      ------------------------------------------------------- */
   const toTop = document.getElementById('toTop');
   if (toTop) {
-    const toggleToTop = () =>
-      toTop.classList.toggle('show', window.scrollY > 600);
-    window.addEventListener('scroll', toggleToTop, { passive: true });
+    onScroll((y) => toTop.classList.toggle('show', y > 600));
     toTop.addEventListener('click', () =>
       window.scrollTo({
         top: 0,
